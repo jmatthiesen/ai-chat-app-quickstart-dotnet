@@ -90,7 +90,7 @@
             });
 
             let answer = "";
-            for await (const response of readJSONLStream(streamResponse.body)) {
+            for await (const response of readJSONStream(streamResponse.body)) {
                 if (response) {
                     // Clear out the DIV if its the first answer chunk we've received
                     if (answer == "") {
@@ -112,7 +112,7 @@
         }
     });
 
-    async function* readJSONLStream(readableStream) {
+    async function* readJSONStream(readableStream) {
         const reader = readableStream.getReader();
         let decoder = new TextDecoder('utf-8');
         while (true) {
