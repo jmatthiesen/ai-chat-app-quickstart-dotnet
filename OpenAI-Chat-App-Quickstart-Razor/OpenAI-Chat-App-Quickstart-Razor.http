@@ -1,0 +1,16 @@
+﻿@OpenAI-Chat-App-Quickstart-Razor_HostAddress = https://localhost:7243
+
+###
+
+POST https://localhost:7243/chat/stream
+Accept: application/json
+Content-Type: application/json
+
+[
+  {
+    "role": "User",
+    "content": "What is the weather?"
+  }
+]
+
+###
